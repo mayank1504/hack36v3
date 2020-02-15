@@ -7,3 +7,16 @@ Our app will scan the assignments uploaded by students and curate the best answe
   2) Animesh Kumar
   3) Sidhant Agarwal
   4) Mayank Choudhary
+  
+  Ideas:
+  The basic idea behind this android application is to provide us a multi-way interface for the ease of students to save time while surfing questions one by one over google.
+We always want things to be done with the minimum amount of input required .
+This would not only reduce the time in surfing but also provide teachers a platform for recommended answers which can be further be used in evaluation of answer sheets.
+In future for covering a large audience we also decided to add one more feature to it  that it would provide comparison between the recommended answers and the students answers .
+So that the teacher don't have to waste time on copies which have a very high match and would give time for copies with low match.
+There would be a section for favourites and quizzes based on the most searched topics.
+
+Platforms Used:
+*Android Studios
+*Firebase 
+*

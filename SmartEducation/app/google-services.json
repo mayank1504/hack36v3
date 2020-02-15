@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "264545502755",
-    "firebase_url": "https://smarteducation-64190.firebaseio.com",
-    "project_id": "smarteducation-64190",
-    "storage_bucket": "smarteducation-64190.appspot.com"
+    "project_number": "139191011255",
+    "firebase_url": "https://smarteducation-a65a8.firebaseio.com",
+    "project_id": "smarteducation-a65a8",
+    "storage_bucket": "smarteducation-a65a8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:264545502755:android:ab993af60d67a9eb04d396",
+        "mobilesdk_app_id": "1:139191011255:android:a740ea5df96f9c0fd14a32",
         "android_client_info": {
           "package_name": "com.example.smarteducation"
         }
       },
       "oauth_client": [
         {
-          "client_id": "264545502755-m7f5qdc289ndci84ore0an4t9mie23as.apps.googleusercontent.com",
+          "client_id": "139191011255-1bmktre8knll90ue8af2om5d8nkjdk53.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.smarteducation",
-            "certificate_hash": "3daa227dd4d32ff186a7aeec0a385d63e7d371ed"
+            "certificate_hash": "3b2d06120f3f8d1947e90fda8bdccd17aae861e2"
           }
         },
         {
-          "client_id": "264545502755-d33pacjv0likktrpv8cp6q1v315llccd.apps.googleusercontent.com",
+          "client_id": "139191011255-4t7iueadm9eq3g2t3854085lhp3bra2c.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCSUzE6N5LPNCdZA0Jmr1hDyCnYfqtmMjg"
+          "current_key": "AIzaSyB3n5t2uWqniblgSh3Nhi3JQOicT3AN04Y"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "264545502755-d33pacjv0likktrpv8cp6q1v315llccd.apps.googleusercontent.com",
+              "client_id": "139191011255-4t7iueadm9eq3g2t3854085lhp3bra2c.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

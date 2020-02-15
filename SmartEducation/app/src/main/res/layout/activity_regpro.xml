@@ -57,6 +57,15 @@
             android:layout_margin="15dp"
             android:hint="Enter your Class"/>
 
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/names"
+            android:minWidth="150dp"
+            android:layout_gravity="center_horizontal"
+            />
+
 
         <Button
             android:id="@+id/buttonSave"

@@ -4,6 +4,10 @@ class UserInformation {
 
     public String userId, name, classs, phone;
 
+    public UserInformation(){
+
+    }
+
     public UserInformation(String userId, String name, String classs, String phone) {
         this.userId = userId;
         this.name = name;

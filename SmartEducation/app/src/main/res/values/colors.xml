@@ -8,4 +8,6 @@
     <color name="endblue">#0bcce6</color>
     <color name="startgreen">#72f734</color>
     <color name="endgreen">#62ff19</color>
+    <color name="darkBlack">#060606</color>
+    <color name="lightBlack">#1B1313</color>
 </resources>

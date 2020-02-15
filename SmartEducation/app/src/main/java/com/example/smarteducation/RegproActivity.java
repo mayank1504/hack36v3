@@ -3,6 +3,7 @@ package com.example.smarteducation;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -39,8 +40,6 @@ public class RegproActivity extends AppCompatActivity implements View.OnClickLis
     private Button buttonSave;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
-    private Spinner sp1;
-    private String classs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +47,7 @@ public class RegproActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regpro);
 
-        sp1 = findViewById(R.id.spinner1);
 
-
-
-        /*
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(getApplicationContext(),
-                android.R.layout.simple_list_item_1,);
-
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sp1.setAdapter(myAdapter);
-
-         */
 
         firebaseAuth = FirebaseAuth.getInstance();
         if(firebaseAuth.getCurrentUser()==null){
@@ -67,15 +55,10 @@ public class RegproActivity extends AppCompatActivity implements View.OnClickLis
             startActivity(new Intent(this,LoginActivity.class));
         }
 
-        /*
-        database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference("Users");
 
-        databaseReference.setValue("Hello, World!");
-        */
         editTextName = findViewById(R.id.editTextName);
-        editClass = findViewById(R.id.editClass);
         editPhone = findViewById(R.id.editPhone);
+        editClass = findViewById(R.id.editClass);
         buttonSave = findViewById(R.id.buttonSave);
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -85,11 +68,10 @@ public class RegproActivity extends AppCompatActivity implements View.OnClickLis
                 saveUserInformation();
             }
         });
-//        sp1.setOnItemClickListener((AdapterView.OnItemClickListener) this);
 
     }
 
-    public void addListenerOnSpinnerItemSelection() {
+  /*  public void addListenerOnSpinnerItemSelection() {
         //sp1 = (Spinner) findViewById(R.id.spinner1);
         sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -104,11 +86,10 @@ public class RegproActivity extends AppCompatActivity implements View.OnClickLis
             }
         });
     }
-
+*/
     private void saveUserInformation(){
         final String name = editTextName.getText().toString().trim();
-//        String classs = editClass.getText().toString().trim();
-        String lok = "gdfs";
+        final String classs = editClass.getText().toString().trim();
         final String phone = editPhone.getText().toString().trim();
 
 
@@ -116,7 +97,8 @@ public class RegproActivity extends AppCompatActivity implements View.OnClickLis
 
             database = FirebaseDatabase.getInstance();
             databaseReference = database.getReference("Users");
-            UserInformation userInformation = new UserInformation(id, name, lok, phone);
+
+            UserInformation userInformation = new UserInformation(id, name, classs, phone);
             databaseReference.setValue(userInformation).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
@@ -148,4 +130,5 @@ public class RegproActivity extends AppCompatActivity implements View.OnClickLis
         }
 
     }
+
 }

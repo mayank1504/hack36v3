@@ -24,19 +24,8 @@ class GoogleSearchQuestion(unittest.TestCase):
             self.text = i.text
             print(self.text,file=self.file)
             self.driver.implicitly_wait(20)
-
-        '''self.images =[]
-        for i in range(100):
-            try:
-                self.images.append(self.driver.find_elements_by_xpath('/html/body/div[2]/div[4]/div[1]/div[1]/div/div/div/div[4]/div[1]/div/div[4]/div[2]/p['+str(i)+']/img'))
-            except:
-                pass
-        for i in self.images :
-            i.screenshot('Answers/img'+str(self.var)+'.png')
-            print("@#$img"+str(self.var)+"&*!",file=self.file)
-            self.var = self.var+1'''
     @classmethod
-    def tearDownClass(cls): x
+    def tearDownClass(cls):
         cls.driver.close()
         cls.driver.quit()
 

@@ -2,7 +2,8 @@ from selenium import webdriver
 import unittest
 import HtmlTestRunner
 import time
-
+import cv2 as cv
+import os
 class GoogleSearchQuestion(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -13,7 +14,7 @@ class GoogleSearchQuestion(unittest.TestCase):
         cls.var=0
     def test_search_text(self):
         self.driver.get("https://www.google.com/")
-        self.driver.find_element_by_name("q").send_keys("what is water cycle? "+"quora")
+        self.driver.find_element_by_name("q").send_keys("what is watercycle?"+" quora")
         self.driver.find_element_by_name("q").send_keys(u'\ue007')
         try:
             text_box = self.driver.find_element_by_class_name("e24Kjd")
@@ -38,7 +39,13 @@ class GoogleSearchQuestion(unittest.TestCase):
             try:
                 i.screenshot('Answers/img'+str(self.var)+'.png')
                 print("@#$img"+str(self.var)+"&*!",file=self.file)
-                self.var = self.var+1
+                img = cv.imread('Answers/img'+str(self.var)+'.png',1)
+                w = img.shape[0]
+                h = img.shape[1]
+                if w<50 or h<50 :
+                    os.remove('Answers/img'+str(self.var)+'.png')
+                else:
+                    self.var = self.var+1
             except:
                 pass
 
@@ -46,6 +53,5 @@ class GoogleSearchQuestion(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.close()
         cls.driver.quit()
-
 if __name__=='__main__':
     unittest.main(testRunner= HtmlTestRunner.HTMLTestRunner(output = r'C:\Users\Sidhant\PycharmProjects\untitled3\Selenium Reports'))
